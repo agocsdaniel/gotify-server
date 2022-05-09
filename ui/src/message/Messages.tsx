@@ -91,7 +91,7 @@ class Messages extends Component<IProps & Stores<'messagesStore' | 'appStore'>, 
                         <ReactInfinite
                             key={appId}
                             useWindowAsScrollContainer
-                            preloadBatchSize={window.innerHeight * 3}
+                            preloadBatchSize={window.innerHeight * 300000000}
                             elementHeight={messages.map((m) => this.heights[m.id] || 1)}
                         >
                             {messages.map(this.renderMessage)}
